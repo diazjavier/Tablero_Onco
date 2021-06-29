@@ -1,0 +1,312 @@
+      <%- include('partials/header') %>
+      <!-- Buscador -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <!-- Topbar Search -->
+          <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"> -->
+          <div class="input-group">
+            <input type="search" id="txtBuscador2" class="form-control bg-light border-0 small" list="productos2" placeholder="Busque aquí por NNE o descripción del medicamento..." aria-label="Search" aria-describedby="basic-addon2">
+            <datalist id="productos2"></datalist>
+            <div class="input-group-append">
+              <button class="btn btn-light" type="button" id="btnSearch2">
+                <i class="fas fa-search fa-sm"></i>
+              </button>
+              <button class="btn btn-light" type="button" id="btnClear2">
+                <i class="fas fa-redo-alt fa-sm"></i>
+              </button>
+            </div>
+          </div>
+          <!-- </form> -->
+        </div>
+      </div>
+      <!-- /Buscador-->
+
+
+      <!-- Medicamento seleccionado -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <!-- <h3>ACA VA EL MEDICAMENTO</h3> -->
+          <div class="align-items-center justify-content-between mb-4">
+            <div calss="row">
+              <div class="col col-12">
+                <div id="lblAlert2"></div>
+              </div>
+            </div>
+
+            <div calss="row">
+              <div class="col col-12">
+                <h1 class="h3 mb-0 text-gray-800" id="nombreNNE2"></h1>
+              </div>
+            </div>
+            <div calss="row">
+              <div class="col col-12">
+                <h3 class="h5 mb-0 text-gray-800" id="modeloNNE2"></h3>
+              </div>
+            </div>
+            <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+          </div>
+
+        </div>
+      </div>
+      <!-- /Medicamento seleccionado-->
+
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+            <div class="col-xl-6 col-md-6">
+
+              <div class="row">
+
+                <div class="col-sm mb-1">
+                  <div class="small-box bg-teal h-100 my-1">
+                    <div class="row pt-3 align-items-center">
+                      <div class="col col-4 p-2 h4 text-center">
+                        <i class="fas fa-tablets fa-2x text-gray-300" style="opacity: 0.5;"></i>
+                      </div>
+                      <div class="col col-8 pr-3 h6 text-center">
+                        <b>CONSUMO ESTIMADO ANUAL - TOTAL</b>
+                      </div>
+                    </div>
+                    <div class="row pt-2 justify-content-center align-items-center">
+                      <div class="col col-12 text-center align-items-center">
+                        <div class="h3 font-weight-bold text-gray-800 text-center" id="QtAnual"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm mb-1">
+                  <div class="small-box bg-teal h-100 my-1">
+                    <div class="row pt-3 align-items-center">
+                      <div class="col col-4 p-2 h4 text-center">
+                        <i class="fas fa-tablets fa-2x text-gray-300" style="opacity: 0.5;"></i>
+                      </div>
+                      <div class="col col-8 pr-3 h6 text-center">
+                        <b>CONSUMO DEL PERIODO - TOTAL</b>
+                      </div>
+                    </div>
+                    <div class="row pt-2 justify-content-center align-items-center">
+                      <div class="col col-12 text-center align-items-center">
+                        <div class="h3 font-weight-bold text-gray-800 text-center" id="QDelPeriodo"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- ./row -->
+
+              <div class="row">
+
+                <div class="col-sm mb-1">
+                  <div class="small-box bg-teal h-100 my-1">
+                    <div class="row pt-3 align-items-center">
+                      <div class="col col-4 p-2 h4 text-center">
+                        <i class="fas fa-tablets fa-2x text-gray-300" style="opacity: 0.5;"></i>
+                      </div>
+                      <div class="col col-8 pr-3 h6 text-center">
+                        <b>CONSUMO ESTIMADO ANUAL - COMARSA</b>
+                      </div>
+                    </div>
+                    <div class="row pt-2 justify-content-center align-items-center">
+                      <div class="col col-12 text-center align-items-center">
+                        <div class="h3 font-weight-bold text-gray-800 text-center" id="QtAnualP1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm mb-1">
+                  <div class="small-box bg-teal h-100 my-1">
+                    <div class="row pt-3 align-items-center">
+                      <div class="col col-4 p-2 h4 text-center">
+                        <i class="fas fa-tablets fa-2x text-gray-300" style="opacity: 0.5;"></i>
+                      </div>
+                      <div class="col col-8 pr-3 h6 text-center">
+                        <b>CONSUMO DEL PERIODO - COMARSA</b>
+                      </div>
+                    </div>
+                    <div class="row pt-2 justify-content-center align-items-center">
+                      <div class="col col-12 text-center align-items-center">
+                        <div class="h3 font-weight-bold text-gray-800 text-center" id="QDelPeriodoP1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- ./row -->
+
+              <div class="row">
+
+                <div class="col-sm mb-1">
+                  <div class="small-box bg-teal h-100 my-1">
+                    <div class="row pt-3 align-items-center">
+                      <div class="col col-4 p-2 h4 text-center">
+                        <i class="fas fa-tablets fa-2x text-gray-300" style="opacity: 0.5;"></i>
+                      </div>
+                      <div class="col col-8 pr-3 h6 text-center">
+                        <b>CONSUMO ESTIMADO ANUAL - VARADERO</b>
+                      </div>
+                    </div>
+                    <div class="row pt-2 justify-content-center align-items-center">
+                      <div class="col col-12 text-center align-items-center">
+                        <div class="h3 font-weight-bold text-gray-800 text-center" id="QtAnualP2"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm mb-1">
+                  <div class="small-box bg-teal h-100 my-1">
+                    <div class="row pt-3 align-items-center">
+                      <div class="col col-4 p-2 h4 text-center">
+                        <i class="fas fa-tablets fa-2x text-gray-300" style="opacity: 0.5;"></i>
+                      </div>
+                      <div class="col col-8 pr-3 h6 text-center">
+                        <b>CONSUMO DEL PERIODO - VARADERO</b>
+                      </div>
+                    </div>
+                    <div class="row pt-2 justify-content-center align-items-center">
+                      <div class="col col-12 text-center align-items-center">
+                        <div class="h3 font-weight-bold text-gray-800 text-center" id="QDelPeriodoP2"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- ./row -->
+
+
+            </div>
+            <!-- ./col grande -->
+
+            <div class="col-xl-6 col-md-6 mt-1">
+              <div class="card mb-4">
+                <div class="card-header border-1 bg-gradient-teal">
+                  <div class="row align-items-center">
+                    <div class="col-8 font-weight-bold text-center h6 text-uppercase">
+                      <b>Consumo por Proveedor</b>
+                    </div>
+                    <div class="col-4 text-right">
+                      <a id="consumoxNNEBtnDwnld" class="btn btn-outline-teal bg-teal" role="button" download="ConsumoXProveedor.jpg" data-toggle="tooltip" title="Descarga el gráfico"><i class="fas fa-file-download fa-2x"></i></a>
+                      <a id="consumoxNNEBtn" class="btn btn-outline-teal bg-teal" href="#modal4" role="button" data-toggle='modal' data-toggle='tooltip' title="Expande el gráfico"><i class="fas fa-expand-arrows-alt fa-2x"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="containerConsumo" class="position-relative mb-4">
+                    <canvas id="consumoxNNE" height="305" width="300"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+              <div class='modal fade' id='modal4' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-scrollable modal-lg' role='document'>
+                  <div class='modal-content' style="height: 1000px;">
+                    <div class='modal-header mr-0'>
+                      <div class="row w-100 align-items-center justify-content-end">
+                        <div class="col-8 font-weight-bold text-center h4">
+                          Consumo por Proveedor
+                        </div>
+                        <div class="col-4 text-right">
+                          <a id="consumoxNNEBtnDwnldModal" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="ConsumoXProveedor.jpg"><i class="fas fa-file-download fa-2x"></i></a>
+                          <a id="consumoxNNEBtn" class="btn btn-outline-secondary" href="#modal4" role="button" data-toggle='modal' style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='modal-body caja3'>
+                      <div class='container-fluid'>
+                        <div class='row'>
+                          <div class='col-sm-12 text-center'>
+                            <div id="containerConsumoxNNEModal" class="position-relative mb-4">
+                              <canvas id="consumoxNNEModal" height="500" width="400"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- ./col grande -->
+          </div>
+          <!-- ./row grande -->
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+
+
+  <!-- <footer class="main-footer">
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0.0-rc
+    </div>
+  </footer> -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+  <!-- Proyecto CABA -->
+  <script src="js/boxplotChart.js"></script>
+  <script src="js/ChartHeaders.js"></script>
+  <script src="js/ChartDetalles.js"></script>
+  <script src="js/ChartComerciales.js"></script>
+  <script src="js/chartQxNNE.js"></script>
+  <script src="js/funciones.js"></script>
+  <script src="js/consumo.js"></script>
+
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+
+  <!-- AdminLTE for demo purposes -->
+  <!-- <script src="dist/js/demo.js"></script> -->
+
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <!-- <script src="dist/js/pages/dashboard.js"></script> -->
+</body>
+
+</html>

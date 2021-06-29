@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tablero de Medicamentos - CABA</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <!-- Bootstrap Table CSS -->
+  <link href="plugins\bootstrap-table-master\dist\bootstrap-table.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn btn-outline-secondary" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars fa-2x"></i></a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="btn btn-outline-secondary" href="dashboard.html" role="button"><i class="fas fa-angle-left fa-2x"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-secondary" href="comerciales.html" role="button"><i class="fas fa-angle-right fa-2x"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-secondary" href="index.html" role="button"><i class="fas fa-home fa-2x"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link">
+        <div class="sidebar-brand-icon rotate-n-15 d-flex justify-content-center">
+          <i class="fas fa-2x fa-pills"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3 text-center">
+          <p class="brand">Control de <br>Medicamentos</p>
+        </div>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="index.html" class="nav-link">
+                <i class="nav-icon fas fa-calendar-alt"></i>
+                <p>
+                  Período
+                </p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="evolucion.html" class="nav-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Evolución del contrato
+                </p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="precios.html" class="nav-link">
+                <i class="nav-icon fas fa-dollar-sign"></i>
+                <p>Precios</p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="consumo.html" class="nav-link">
+                <i class="nav-icon fas fa-tablets"></i>
+                <p>Consumo</p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="dashboard.html" class="nav-link">
+                <i class="nav-icon fas fa-chart-area"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="genericos.html" class="nav-link">
+                <i class="nav-icon fas fa-flask"></i>
+                <p>
+                  Genericos
+                </p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="comerciales.html" class="nav-link">
+                <i class="nav-icon fas fa-prescription"></i>
+                <p>
+                  Comerciales
+                </p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Page Heading -->
+      <!-- Content Header (Page header) Periodo-->
+      <div class="content-header">
+        <div id="dashboard" class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <p class="m-0 title">Genéricos (NNE)</p>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active">Genéricos</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header Periodo-->
+
+      <!-- Buscador -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <!-- Topbar Search -->
+          <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"> -->
+          <div class="input-group">
+            <input type="search" id="txtBuscador4" class="form-control bg-light border-0 small" placeholder="Busque aquí por NNE o descripción del medicamento..." aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-light" type="button" id="btnSearch4">
+                <i class="fas fa-search fa-sm"></i>
+              </button>
+              <button class="btn btn-light" type="button" id="btnClear4">
+                <i class="fas fa-redo-alt fa-sm"></i>
+              </button>
+            </div>
+          </div>
+          <!-- </form> -->
+        </div>
+      </div>
+      <!-- /Buscador-->
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <table
+          id="tblGenericos"
+          data-search="false"
+          data-show-refresh="false"
+          data-show-toggle="false"
+          data-show-fullscreen="false"
+          data-show-columns="false"
+          data-show-columns-toggle-all="true"
+          data-detail-view="true"
+          data-show-export="true"
+          data-click-to-select="true"
+          data-detail-formatter="detailFormatter"
+          data-minimum-count-columns="2"
+          data-show-pagination-switch="false"
+          data-pagination="false"
+          data-id-field="nne"
+          data-page-list="[10, 25, 50, 100, all]"
+          data-show-footer="false"
+          data-side-pagination="server"
+          data-response-handler="responseHandler">
+          </table>
+
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+
+  <!-- Modal del chart de Medianas  -->
+  <div class="modal fade alfrente" id="modalMEdianas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content" style="height: 1000px;">
+        <div class="modal-header mr-0">
+          <div class="row w-100 align-items-center justify-content-end">
+            <div class="col-8 font-weight-bold text-center h4">
+              Evolución de la mediana
+            </div>
+            <div class="col-4 text-right">
+              <a id="btnDwnldModal" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="Medianas.jpg"><i class="fas fa-file-download fa-2x"></i></a>
+              <a id="boxplotMedianasBtnModal" class="btn btn-outline-secondary" href="#modalMEdianas" role="button" data-toggle="modal" style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body caja3">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <div id="containerMedianaModal" class="position-relative mb-4">
+                  <canvas id="boxplotMedianasModa" height="300" width="400"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal del chart de Comerciales  -->
+  <div class="modal fade alfrente" id="modalComerciales" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content" style="height: 1000px;">
+        <div class="modal-header mr-0">
+          <div class="row w-100 align-items-center justify-content-end">
+            <div class="col-8 font-weight-bold text-center h4">
+              Evolución del precio del producto comercial
+            </div>
+            <div class="col-4 text-right">
+              <a id="btnDwnldModalComerciales" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="PreciosProducto.jpg"><i class="fas fa-file-download fa-2x"></i></a>
+              <a id="comercialesBtnModal" class="btn btn-outline-secondary" href="#modalComerciales" role="button" data-toggle="modal" style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body caja3">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <div id="containerComercialModal" class="position-relative mb-4">
+                  <canvas id="chartComercialModal" height="300" width="400"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de la tabla de Comerciales  -->
+  <div class="modal fade" id="modalTbl" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
+      <div class="modal-content" style="height: 1000px;">
+        <div class="modal-header mr-0">
+          <div class="row w-100 align-items-center justify-content-end">
+            <div id="titleTblModal" class="col-8 font-weight-bold text-center h4">
+              Comerciales asociados
+            </div>
+            <div class="col-4 text-right">
+              <!-- <a id="btnDwnldTblModal" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="Comerciales.jpg"><i class="fas fa-file-download fa-2x"></i></a> -->
+              <a id="boxplotMedianasBtnModal" class="btn btn-outline-secondary" href="#modalTbl" role="button" data-toggle="modal" style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body caja3">
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid" height="300" width="400">
+              <table
+              id="tblComerciales"
+              data-search="false"
+              data-show-refresh="false"
+              data-show-toggle="false"
+              data-show-fullscreen="false"
+              data-show-columns="false"
+              data-show-columns-toggle-all="true"
+              data-detail-view="true"
+              data-show-export="true"
+              data-click-to-select="true"
+              data-detail-formatter="detailFormatter"
+              data-minimum-count-columns="2"
+              data-show-pagination-switch="false"
+              data-pagination="false"
+              data-id-field="CodCABA"
+              data-page-list="[10, 25, 50, 100, all]"
+              data-show-footer="false"
+              data-side-pagination="server"
+              data-response-handler="responseHandler">
+              </table>
+
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de la tabla de evolución de Medianas  -->
+  <div class="modal fade" id="modalTblMediana" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
+      <div class="modal-content" style="height: 1000px;">
+        <div class="modal-header mr-0">
+          <div class="row w-100 align-items-center justify-content-end">
+            <div id="titleTblModalMedianas" class="col-8 font-weight-bold text-center h4">
+              Evolución de la Mediana
+            </div>
+            <div class="col-4 text-right">
+              <!-- <a id="btnDwnldTblModalMedianas" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="Medianas.jpg"><i class="fas fa-file-download fa-2x"></i></a> -->
+              <a id="boxplotMedianasBtnModalMedinas" class="btn btn-outline-secondary" href="#modalTblMediana" role="button" data-toggle="modal" style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body caja3">
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid" height="300" width="400">
+              <table
+              id="tblMedianas"
+              data-search="false"
+              data-show-refresh="false"
+              data-show-toggle="false"
+              data-show-fullscreen="false"
+              data-show-columns="false"
+              data-show-columns-toggle-all="true"
+              data-detail-view="true"
+              data-show-export="true"
+              data-click-to-select="true"
+              data-detail-formatter="detailFormatter"
+              data-minimum-count-columns="2"
+              data-show-pagination-switch="false"
+              data-pagination="false"
+              data-id-field="fechaOrig"
+              data-page-list="[10, 25, 50, 100, all]"
+              data-show-footer="false"
+              data-side-pagination="server"
+              data-response-handler="responseHandler">
+              </table>
+
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de la tabla de Comerciales por Mediana  -->
+  <div class="modal fade" id="modalTblComercialesXMediana" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
+      <div class="modal-content" style="height: 1000px;">
+        <div class="modal-header mr-0">
+          <div class="row w-100 align-items-center justify-content-end">
+            <div id="titleTblModal" class="col-8 font-weight-bold text-center h4">
+              Comerciales involucrados en el cálculo de la Mediana
+            </div>
+            <div class="col-4 text-right">
+              <!-- <a id="btnDwnldTblModal" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="Comerciales.jpg"><i class="fas fa-file-download fa-2x"></i></a> -->
+              <a id="boxplotComercialesXMedianaBtnModal" class="btn btn-outline-secondary" href="#modalTblComercialesXMediana" role="button" data-toggle="modal" style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body caja3">
+
+          <!-- Main content -->
+          <section class="content">
+            <div class="container-fluid" height="300" width="400">
+              <table
+              id="tblComercialesXMediana"
+              data-search="false"
+              data-show-refresh="false"
+              data-show-toggle="false"
+              data-show-fullscreen="false"
+              data-show-columns="false"
+              data-show-columns-toggle-all="true"
+              data-detail-view="true"
+              data-show-export="true"
+              data-click-to-select="true"
+              data-detail-formatter="detailFormatter"
+              data-minimum-count-columns="2"
+              data-show-pagination-switch="false"
+              data-pagination="false"
+              data-id-field="CodCABA"
+              data-page-list="[10, 25, 50, 100, all]"
+              data-show-footer="false"
+              data-side-pagination="server"
+              data-response-handler="responseHandler">
+              </table>
+
+            </div><!-- /.container-fluid -->
+          </section>
+          <!-- /.content -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <footer class="main-footer">
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0.0-rc
+    </div>
+  </footer> -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.bundle.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script src="plugins/bootstrap-table-master/dist/bootstrap-table.min.js"></script>
+  <script src="plugins/tableExport.jquery.plugin-master/tableExport.min.js"></script>
+  <script src="plugins/bootstrap-table-master/dist/bootstrap-table-locale-all.min.js"></script>
+  <script src="plugins/bootstrap-table-master/dist/extensions/export/bootstrap-table-export.min.js"></script>
+
+  <!-- Proyecto CABA -->
+  <script src="js/boxplotChart.js"></script>
+  <script src="js/ChartHeaders.js"></script>
+  <script src="js/ChartDetalles.js"></script>
+  <script src="js/ChartComerciales.js"></script>
+  <script src="js/chartPorcPeriodo.js"></script>
+  <script src="js/chartBoxplotMedianas.js"></script>
+  <script src="js/chartEvolucionPrecios.js"></script>
+  <script src="js/chartComparativa.js"></script>
+  <script src="js/chartComercialesEntregados.js"></script>
+  <script src="js/chartPxQxProducto.js"></script>
+  <script src="js/chartComercialUnico.js"></script>
+  <script src="js/funciones.js"></script>
+  <script src="js/genericos.js"></script>
+
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+
+  <!-- AdminLTE for demo purposes -->
+  <!-- <script src="dist/js/demo.js"></script> -->
+
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <!-- <script src="dist/js/pages/dashboard.js"></script> -->
+</body>
+
+</html>

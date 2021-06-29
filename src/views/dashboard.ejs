@@ -1,0 +1,526 @@
+      <%- include('partials/header') %>
+      <!-- Buscador -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <!-- Topbar Search -->
+          <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"> -->
+          <div class="input-group">
+            <input type="search" id="txtBuscador3" class="form-control bg-light border-0 small" list="productos3" placeholder="Busque aquí por NNE o descripción del medicamento..." aria-label="Search" aria-describedby="basic-addon2">
+            <datalist id="productos3"></datalist>
+            <div class="input-group-append">
+              <button class="btn btn-light" type="button" id="btnSearch3">
+                <i class="fas fa-search fa-sm"></i>
+              </button>
+              <button class="btn btn-light" type="button" id="btnClear3">
+                <i class="fas fa-redo-alt fa-sm"></i>
+              </button>
+            </div>
+          </div>
+          <!-- </form> -->
+        </div>
+      </div>
+      <!-- /Buscador-->
+
+
+      <!-- Medicamento seleccionado -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <!-- <h3>ACA VA EL MEDICAMENTO</h3> -->
+          <div class="align-items-center justify-content-between mb-4">
+            <div calss="row">
+              <div class="col col-12">
+                <div id="lblAlert3"></div>
+              </div>
+            </div>
+
+            <div calss="row">
+              <div class="col col-12">
+                <h1 class="h3 mb-0 text-gray-800" id="nombreNNE3"></h1>
+              </div>
+            </div>
+            <div calss="row">
+              <div class="col col-12">
+                <h3 class="h5 mb-0 text-gray-800" id="modeloNNE3"></h3>
+              </div>
+            </div>
+            <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+          </div>
+
+        </div>
+      </div>
+      <!-- /Medicamento seleccionado-->
+
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+
+          <!-- Small boxes (Stat box) -->
+          <div class="row align-items-center my-2">
+            <div class="card-deck">
+
+              <div class="card">
+                <div class="card-header border-1  bg-gradient-secondary">
+                  <div class="row align-items-center">
+                    <div class="col-8 font-weight-bold text-center h6 text-uppercase">
+                      Proporción del período transcurrido
+                    </div>
+                    <div class="col-4 text-right">
+                      <a id="chartPorcPeriodoBtnDwnldDash" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="GraficoDona.jpg" data-toggle="tooltip" title="Descarga el gráfico"><i
+                          class="fas fa-file-download fa-1x"></i></a>
+                      <a id="chartPorcPeriodoBtnDash" class="btn btn-outline-secondary" href="#modal1Dash" role="button" data-toggle='modal' style="background-color: #cfcfcf;" data-toggle='tooltip' title="Expande el gráfico"><i
+                          class="fas fa-expand-arrows-alt fa-1x"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="containerConsumo" class="position-relative mb-4">
+                    <canvas id="chartPorcPeriodoDash" height="300" width="300"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+              <div class='modal fade' id='modal1Dash' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-scrollable modal-lg' role='document'>
+                  <div class='modal-content' style="height: 1000px;">
+                    <div class='modal-header mr-0'>
+                      <div class="row w-100 align-items-center justify-content-end">
+                        <div class="col-8 font-weight-bold text-center h4">
+                          Proporción del período transcurrido
+                        </div>
+                        <div class="col-4 text-right">
+                          <a id="chartPorcPeriodoBtnDwnldModalDash" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="GraficoDona.jpg"><i class="fas fa-file-download fa-2x"></i></a>
+                          <a id="chartPorcPeriodoBtnModalDash" class="btn btn-outline-secondary" href="#modal1Dash" role="button" data-toggle='modal' style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='modal-body caja3'>
+                      <div class='container-fluid'>
+                        <div class='row'>
+                          <div class='col-sm-12 text-center'>
+                            <div id="containerComModalDash" class="position-relative">
+                              <canvas id="chartPorcPeriodoModalDash" height="500" width="400" class="pb-2"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header border-1  bg-gradient-secondary">
+                  <div class="row align-items-center">
+                    <div class="col-8 font-weight-bold text-center h6 text-uppercase">
+                      Evolución de la mediana
+                    </div>
+                    <div class="col-4 text-right">
+                      <a id="boxplotMedianasBtnDwnldDash" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="Medianas.jpg" data-toggle="tooltip" title="Descarga el gráfico"><i
+                          class="fas fa-file-download fa-1x"></i></a>
+                      <a id="boxplotMedianasBtnDash" class="btn btn-outline-secondary" href="#modal2Dash" role="button" style="background-color: #cfcfcf;" data-toggle='modal' data-toggle='tooltip' title="Expande el gráfico"><i
+                          class="fas fa-expand-arrows-alt fa-1x"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="containerMedianas" class="position-relative mb-4">
+                    <canvas id="boxplotMedianasDash" height="300" width="300"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+              <div class='modal fade' id='modal2Dash' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-scrollable modal-lg' role='document'>
+                  <div class='modal-content' style="height: 1000px;">
+                    <div class='modal-header mr-0'>
+                      <div class="row w-100 align-items-center justify-content-end">
+                        <div class="col-8 font-weight-bold text-center h4">
+                          Evolución de la mediana
+                        </div>
+                        <div class="col-4 text-right">
+                          <a id="boxplotMedianasBtnDwnldDashModal" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="Medianas.jpg"><i class="fas fa-file-download fa-2x"></i></a>
+                          <a id="boxplotMedianasBtnDashModal" class="btn btn-outline-secondary" href="#modal2Dash" role="button" data-toggle='modal' style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='modal-body caja3'>
+                      <div class='container-fluid'>
+                        <div class='row'>
+                          <div class='col-sm-12 text-center'>
+                            <div id="containerMedianasDash" class="position-relative">
+                              <canvas id="boxplotMedianasModalDash" height="300" width="500" class="pb-2"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header border-1  bg-gradient-secondary">
+                  <div class="row align-items-center">
+                    <div class="col-8 font-weight-bold text-center h6 text-uppercase">
+                      Evolución de la mediana por Proveedor
+                    </div>
+                    <div class="col-4 text-right">
+                      <a id="chartPreciosBtnDwnldDash" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="MedianasPorProveedor.jpg" data-toggle="tooltip" title="Descarga el gráfico"><i
+                          class="fas fa-file-download fa-1x"></i></a>
+                      <a id="chartPreciosBtnDash" class="btn btn-outline-secondary" href="#modal3Dash" role="button" style="background-color: #cfcfcf;" data-toggle='modal' data-toggle='tooltip' title="Expande el gráfico"><i
+                          class="fas fa-expand-arrows-alt fa-1x"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="containerPrecios2" class="position-relative mb-4">
+                    <canvas id="chartPrecios" height="300" width="300"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+              <div class='modal fade' id='modal3Dash' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-scrollable modal-lg' role='document'>
+                  <div class='modal-content' style="height: 1000px;">
+                    <div class='modal-header mr-0'>
+                      <div class="row w-100 align-items-center justify-content-end">
+                        <div class="col-8 font-weight-bold text-center h4">
+                          Evolución de la mediana por Proveedor
+                        </div>
+                        <div class="col-4 text-right">
+                          <a id="chartPreciosBtnDwnldDashModal" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="MedianasPorProveedor.jpg"><i class="fas fa-file-download fa-2x"></i></a>
+                          <a id="chartPreciosBtnDashModal" class="btn btn-outline-secondary" href="#modal3Dash" role="button" data-toggle='modal' style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='modal-body caja3'>
+                      <div class='container-fluid'>
+                        <div class='row'>
+                          <div class='col-sm-12 text-center'>
+                            <div id="containerPrecios2Modal" class="position-relative mb-4">
+                              <canvas id="chartPreciosModal" height="200" width="300"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- /card-deck -->
+
+          </div>
+          <!-- ./row grande -->
+
+          <!-- Small boxes (Stat box) -->
+          <div class="row align-items-center my-2">
+            <div class="card-deck">
+
+              <div class="card">
+                <div class="card-header border-1  bg-gradient-secondary">
+                  <div class="row align-items-center">
+                    <div class="col-8 font-weight-bold text-center h6 text-uppercase">
+                      Comparativa - Medianas
+                    </div>
+                    <div class="col-4 text-right">
+                      <a id="chartComparativaBtnDwnldDash" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="MedianasComparadas.jpg" data-toggle="tooltip" title="Descarga el gráfico"><i
+                          class="fas fa-file-download fa-1x"></i></a>
+                      <a id="chartComparativaBtnDash" class="btn btn-outline-secondary" href="#modal4Dash" role="button" style="background-color: #cfcfcf;" data-toggle='modal' data-toggle='tooltip' title="Expande el gráfico"><i
+                          class="fas fa-expand-arrows-alt fa-1x"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="containerComparativa" class="position-relative mb-4">
+                    <canvas id="chartComparativa" height="300" width="300"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+              <div class='modal fade' id='modal4Dash' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-scrollable modal-lg' role='document'>
+                  <div class='modal-content' style="height: 1000px;">
+                    <div class='modal-header mr-0'>
+                      <div class="row w-100 align-items-center justify-content-end">
+                        <div class="col-8 font-weight-bold text-center h4">
+                          Comparativa - Medianas
+                        </div>
+                        <div class="col-4 text-right">
+                          <a id="chartComparativaBtnDwnldDashModal" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="MedianasComparadas.jpg"><i class="fas fa-file-download fa-2x"></i></a>
+                          <a id="chartComparativaBtnDashModal" class="btn btn-outline-secondary" href="#modal4Dash" role="button" data-toggle='modal' style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='modal-body caja3'>
+                      <div class='container-fluid'>
+                        <div class='row'>
+                          <div class='col-sm-12 text-center'>
+                            <div id="containerComparativaModal" class="position-relative mb-4">
+                              <canvas id="chartComparativaModal" height="200" width="300"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header border-1  bg-gradient-secondary">
+                  <div class="row align-items-center">
+                    <div class="col-8 font-weight-bold text-center h6 text-uppercase">
+                      Evolución de precios de comerciales entregados
+                    </div>
+                    <div class="col-4 text-right">
+                      <a id="chartEvolPxProvBtnDwnldDash" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="EvolPxComercialEntregado.jpg" data-toggle="tooltip" title="Descarga el gráfico"><i
+                          class="fas fa-file-download fa-1x"></i></a>
+                      <a id="chartEvolPxProvBtnDash" class="btn btn-outline-secondary" href="#modal5Dash" role="button" style="background-color: #cfcfcf;" data-toggle='modal' data-toggle='tooltip' title="Expande el gráfico"><i
+                          class="fas fa-expand-arrows-alt fa-1x"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="containerEvolPxProv" class="position-relative mb-4">
+                    <canvas id="chartEvolPxProv" height="300" width="300"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+              <div class='modal fade' id='modal5Dash' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-scrollable modal-lg' role='document'>
+                  <div class='modal-content' style="height: 1000px;">
+                    <div class='modal-header mr-0'>
+                      <div class="row w-100 align-items-center justify-content-end">
+                        <div class="col-8 font-weight-bold text-center h4">
+                          Evolución de precios de comerciales entregados
+                        </div>
+                        <div class="col-4 text-right">
+                          <a id="chartEvolPxProvBtnDwnldDashModal" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="EvolPxComercialEntregado.jpg"><i class="fas fa-file-download fa-2x"></i></a>
+                          <a id="chartEvolPxProvBtnDashModal" class="btn btn-outline-secondary" href="#modal5Dash" role="button" data-toggle='modal' style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='modal-body caja3'>
+                      <div class='container-fluid'>
+                        <div class='row'>
+                          <div class='col-sm-12 text-center'>
+                            <div id="containerEvolPxProvModal" class="position-relative mb-4">
+                              <canvas id="chartEvolPxProvModal" height="200" width="300"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+              <div class="card">
+                <div class="card-header border-1  bg-gradient-secondary">
+                  <div class="row align-items-center">
+                    <div class="col-8 font-weight-bold text-center h6 text-uppercase">
+                      Evolución de PxQ acumulado en el período por proveedor
+                    </div>
+                    <div class="col-4 text-right">
+                      <a id="chartEvolPxQxComBtnDwnldDash" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="EvolPxQxComercial.jpg" data-toggle="tooltip" title="Descarga el gráfico"><i
+                          class="fas fa-file-download fa-1x"></i></a>
+                      <a id="chartEvolPxQxComBtnDash" class="btn btn-outline-secondary" href="#modal6Dash" role="button" style="background-color: #cfcfcf;" data-toggle='modal' data-toggle='tooltip' title="Expande el gráfico"><i
+                          class="fas fa-expand-arrows-alt fa-1x"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="containerEvolPxQCom" class="position-relative mb-4">
+                    <canvas id="chartEvolPxQxCom" height="300" width="300"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+              <div class='modal fade' id='modal6Dash' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-scrollable modal-lg' role='document'>
+                  <div class='modal-content' style="height: 1000px;">
+                    <div class='modal-header mr-0'>
+                      <div class="row w-100 align-items-center justify-content-end">
+                        <div class="col-8 font-weight-bold text-center h4">
+                          Evolución de PxQ acumulado en el período por proveedor
+                        </div>
+                        <div class="col-4 text-right">
+                          <a id="chartEvolPxQxComBtnDwnldDashModal" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="EvolPxQxComercial.jpg"><i class="fas fa-file-download fa-2x"></i></a>
+                          <a id="chartEvolPxQxComBtnDashModal" class="btn btn-outline-secondary" href="#modal6Dash" role="button" data-toggle='modal' style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='modal-body caja3'>
+                      <div class='container-fluid'>
+                        <div class='row'>
+                          <div class='col-sm-12 text-center'>
+                            <div id="containerEvolPxQComModal" class="position-relative mb-4">
+                              <canvas id="chartEvolPxQxComModal" height="200" width="300"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+            </div>
+            <!-- ./card-deck -->
+          </div>
+          <!-- ./row grande -->
+
+          <!-- Small boxes (Stat box) -->
+          <!-- <div class="row align-items-center my-2">
+            <div class="col-xl-12 col-md-12 mb-4"> -->
+              <div class="card">
+                <div class="card-header border-1 bg-gradient-secondary">
+                  <div class="row align-items-center">
+                    <div class="col-8 font-weight-bold text-center h6 text-uppercase">
+                      Evolución de precios - Productos comerciales
+                    </div>
+                    <div class="col-4 text-right">
+                      <button type="button" class="btn btn-info btn-sm ml-auto mb-1" id="btnToggleLabel">Ocultar etiquetas</button>
+                      <a id="chartComercialesJuntosBtnDwnldDash" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="EvolComerciales.jpg" data-toggle="tooltip" title="Descarga el gráfico"><i
+                          class="fas fa-file-download fa-1x"></i></a>
+                      <a id="chartComercialesJuntosBtnDash" class="btn btn-outline-secondary" href="#modal7Dash" role="button" style="background-color: #cfcfcf;" data-toggle='modal' data-toggle='tooltip' title="Expande el gráfico"><i
+                          class="fas fa-expand-arrows-alt fa-1x"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div id="containerComercialesJuntos" class="position-relative mb-4">
+                    <canvas id="chartComercialesJuntos" height="500" width="300"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+              <div class='modal fade' id='modal7Dash' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-scrollable modal-lg' role='document'>
+                  <div class='modal-content' style="height: 1000px;">
+                    <div class='modal-header mr-0'>
+                      <div class="row w-100 align-items-center justify-content-end">
+                        <div class="col-8 font-weight-bold text-center h4">
+                          Evolución de precios - Productos comerciales
+                        </div>
+                        <div class="col-4 text-right">
+                          <a id="chartComercialesJuntosBtnDwnldDashModal" class="btn btn-outline-secondary" role="button" style="background-color: #cfcfcf;" download="EvolComerciales.jpg"><i class="fas fa-file-download fa-2x"></i></a>
+                          <a id="chartComercialesJuntosBtnDashModal" class="btn btn-outline-secondary" href="#modal7Dash" role="button" data-toggle='modal' style="background-color: #cfcfcf;"><i class="fas fa-times fa-2x"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='modal-body caja3'>
+                      <div class='container-fluid'>
+                        <div class='row'>
+                          <div class='col-sm-12 text-center'>
+                            <div id="containerComercialesJuntosModal" class="position-relative mb-4">
+                              <canvas id="chartComercialesJuntosModal" height="500" width="600"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card -->
+
+
+
+            <!-- </div> -->
+            <!-- ./col grande -->
+          <!-- </div> -->
+          <!-- ./row grande -->
+
+
+
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+
+
+  <!-- <footer class="main-footer">
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0.0-rc
+    </div>
+  </footer> -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.bundle.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+  <!-- Proyecto CABA -->
+  <script src="js/boxplotChart.js"></script>
+  <script src="js/ChartHeaders.js"></script>
+  <script src="js/ChartDetalles.js"></script>
+  <script src="js/ChartComerciales.js"></script>
+  <script src="js/chartPorcPeriodo.js"></script>
+  <script src="js/chartBoxplotMedianas.js"></script>
+  <script src="js/chartEvolucionPrecios.js"></script>
+  <script src="js/chartComparativa.js"></script>
+  <script src="js/chartComercialesEntregados.js"></script>
+  <script src="js/chartPxQxProducto.js"></script>
+  <script src="js/chartComercialesJuntos.js"></script>
+  <script src="js/funciones.js"></script>
+  <script src="js/dashboard.js"></script>
+
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+
+  <!-- AdminLTE for demo purposes -->
+  <!-- <script src="dist/js/demo.js"></script> -->
+
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <!-- <script src="dist/js/pages/dashboard.js"></script> -->
+</body>
+
+</html>

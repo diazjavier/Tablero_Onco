@@ -1,0 +1,143 @@
+      <%- include('../partials/header') %>
+      <!-- Buscador -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <!-- Topbar Search -->
+          <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"> -->
+          <div class="input-group">
+            <input type="search" id="txtBuscador6" class="form-control bg-light border-0 small" placeholder="Busque aquí al usuario..." aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-light" type="button" id="btnSearch6">
+                <i class="fas fa-search fa-sm"></i>
+              </button>
+              <button class="btn btn-light" type="button" id="btnClear6">
+                <i class="fas fa-redo-alt fa-sm"></i>
+              </button>
+
+              <a href="/signup" class="btn btn-primary"><i class="nav-icon fas fa-plus-circle"></i>  Nuevo usuario</a>
+            </div>
+          </div>
+          <!-- </form> -->
+        </div>
+      </div>
+      <!-- /Buscador-->
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <table
+          id="tblUsuarios"
+          data-search="false"
+          data-show-refresh="false"
+          data-show-toggle="false"
+          data-show-fullscreen="false"
+          data-show-columns="false"
+          data-show-columns-toggle-all="true"
+          data-detail-view="false"
+          data-show-export="true"
+          data-click-to-select="true"
+          data-detail-formatter="detailFormatter"
+          data-minimum-count-columns="2"
+          data-show-pagination-switch="false"
+          data-pagination="false"
+          data-id-field="CodCombinado"
+          data-page-list="[10, 25, 50, 100, all]"
+          data-show-footer="false"
+          data-side-pagination="server"
+          data-response-handler="responseHandler">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Usuario</th>
+              <th>e-mail</th>
+              <th>Rol</th>
+              <th>Activo</th>
+              <th>Acciones</th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <% for (i=0; i < usuarios.length; i++) { %>
+              <tr>
+                <td> <%= usuarios[i].id %> </td>
+                <td> <%= usuarios[i].nombre %> </td>
+                <td> <%= usuarios[i].usuario %> </td>
+                <td> <%= usuarios[i].email %> </td>
+                <td> <%= usuarios[i].rol %> </td>
+                <td> <%= usuarios[i].activo %> </td>
+                <td>  </td>
+              </tr>
+            <% } %>
+          </tbody>
+          </table>
+
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- ./wrapper -->
+
+</div>
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.bundle.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+<!-- Bootstrap Table -->
+<script src="plugins/bootstrap-table-master/dist/bootstrap-table.min.js"></script>
+<script src="plugins/tableExport.jquery.plugin-master/tableExport.min.js"></script>
+<script src="plugins/bootstrap-table-master/dist/bootstrap-table-locale-all.min.js"></script>
+<script src="plugins/bootstrap-table-master/dist/extensions/export/bootstrap-table-export.min.js"></script>
+
+<!-- Proyecto CABA -->
+<script src="js/ChartHeaders.js"></script>
+<script src="js/ChartDetalles.js"></script>
+<script src="js/ChartComerciales.js"></script>
+
+<script src="js/funciones.js"></script>
+<script src="js/usuarios.js"></script>
+
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+
+<!-- AdminLTE for demo purposes -->
+<!-- <script src="dist/js/demo.js"></script> -->
+
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!-- <script src="dist/js/pages/dashboard.js"></script> -->
+</body>
+
+</html>

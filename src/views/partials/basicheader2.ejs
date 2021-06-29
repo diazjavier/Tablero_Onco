@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tablero de Medicamentos - CABA</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
+  <!-- Bootstrap Table CSS -->
+  <link href="../plugins\bootstrap-table-master\dist\bootstrap-table.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn btn-outline-secondary" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars fa-2x"></i></a>
+        </li>
+      </ul>
+      <div class="navbar-nav mx-auto">
+        <h4>Bienvenido: <%= elUsuario.nombre %></h4>
+      </div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="btn btn-outline-secondary" href="/signin" role="button" data-toggle="tooltip" title="Inicio"><i class="fas fa-home fa-2x"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-toggle="tooltip" title="Acciones del usuario">
+              <i class="fas fa-cog fa-2x"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/changepswd/ <%= elUsuario.idUsuario %>"><i class="fas fa-key m-1"></i>Cambio de contraseña</a>
+              <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt m-1"></i>Cerrar sesión</a>
+            </div>
+          </div>
+        </li>
+
+
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="/periodo" class="brand-link">
+        <div class="sidebar-brand-icon rotate-n-15 d-flex justify-content-center">
+          <i class="fas fa-2x fa-pills"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3 text-center">
+          <p class="brand">Control de <br>Medicamentos</p>
+        </div>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="/periodo" class="nav-link">
+                <i class="nav-icon fas fa-calendar-alt"></i>
+                <p>
+                  Período
+                </p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="/evolucion" class="nav-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Evolución del contrato
+                </p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="/precios" class="nav-link">
+                <i class="nav-icon fas fa-dollar-sign"></i>
+                <p>Precios</p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="/consumo" class="nav-link">
+                <i class="nav-icon fas fa-tablets"></i>
+                <p>Consumo</p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="/dashboard" class="nav-link">
+                <i class="nav-icon fas fa-chart-area"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="/genericos" class="nav-link">
+                <i class="nav-icon fas fa-flask"></i>
+                <p>
+                  Genericos
+                </p>
+              </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <li class="nav-item mt-2">
+              <a href="/comerciales" class="nav-link">
+                <i class="nav-icon fas fa-prescription"></i>
+                <p>
+                  Comerciales
+                </p>
+              </a>
+            </li>
+            <% if(elUsuario.idRol == 2){ %>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item mt-2">
+              <a href="/usuarios" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>
+                  Usuarios
+                </p>
+              </a>
+            </li>
+            <% } %>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>

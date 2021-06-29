@@ -1,0 +1,33 @@
+<%- include('../partials/noheader') %>
+<div class="container">
+  <div class="row p-4">
+    <div class="col-md-6 mx-auto">
+      <div class="card">
+        <div class="card-header login-header">
+          <h2>Recuperación de credenciales</h2>
+        </div>
+        <div class="card-boody p-4">
+          <form action="/senduser" method="POST">
+            <div class="form-group p-1">
+              <p style="color:red"><%- noFind %></p>
+            </div>
+            <div class="form-group p-1">
+              <label for="usuario">Correo electrónico:</label>
+              <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico" class="form-control" required>
+            </div>
+            <div class="form-group p-1">
+              <p style="color:rgb(194, 194, 194)">Ingrese el mismo correo con el que se registró</p>
+              <p style="color:rgb(194, 194, 194)">Sus credenciales serán enviadas por correo electrónico</p>
+              <p style="color:rgb(194, 194, 194)">Por favor verifique su bandeja de correo no deseado</p>
+            </div>
+            <div class="form-group p-1 text-center">
+              <a href="/signin" type="button" class="btn btn-danger">Cancelar</a>
+              <button type="submit" class="btn btn-info">Recuperar usuario</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('../partials/basicfooter') %>

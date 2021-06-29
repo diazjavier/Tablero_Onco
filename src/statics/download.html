@@ -1,0 +1,40 @@
+<a id="download" download="triangle.png">
+<button type="button" onClick="dwnld()">Download</button>
+</a>
+
+<canvas id="myCanvas" width="720" height="450">Your browser does not support Canvas.</canvas>
+
+
+
+<textarea id="text-val" rows="4">This is the content of my file</textarea><br/>
+<input type="button" id="dwn-btn" value="Download dinamically generated text file"/>
+
+<script type="text/javascript">
+  function dwnld() {
+  var download = document.getElementById("download");
+  var image = document.getElementById("myCanvas").toDataURL("image/png")
+      .replace("image/png", "image/octet-stream");
+  download.setAttribute("href", image);
+  //download.setAttribute("download","archive.png");
+  }
+
+
+
+  let bd = document.getElementById("dwn-btn");
+  let txt = document.getElementById("text-val");
+  console.log(txt.value);
+  bd.addEventListener('click', function(){download("Eltexto", txt.value)})
+
+  function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+};
+</script>
