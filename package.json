@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node index.js"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +19,7 @@
     "express-session": "^1.17.2",
     "generate-password": "^1.6.0",
     "morgan": "^1.10.0",
-    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
     "nodemailer": "^6.6.2",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"
