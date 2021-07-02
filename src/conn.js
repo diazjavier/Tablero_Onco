@@ -11,7 +11,7 @@ const { promisify } = require('util');
 const conn = {
     database: {
       host: '134.209.124.47',
-      user: 'jdiazbd',
+      user: 'jdiazbd2',
       password: '123456Aa?',
       database: 'tablerocaba'
     }

@@ -48,6 +48,6 @@ app.use(require(path.join(__dirname, 'routes', 'mails')));
 // app.use('/auth', require(path.join(__dirname, 'routes', 'auth')));
 // app.use(require(path.join(__dirname, 'routes', 'usuarios')));
 
-app.listen(3000, () => {
+app.listen(app.get('port'), () => {
   console.log('Servidor en puerto ', app.get('port'));
 });
