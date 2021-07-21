@@ -1,11 +1,11 @@
-function chartBoxPlotMedianas(chartElement){
+function chartBoxPlotMedianas2(chartElement){
 
   var ctx = chartElement.getContext('2d');
 
-  if(window.boxPlotMedianas != undefined && window.boxPlotMedianas != null){
-    window.boxPlotMedianas.destroy();
+  if(window.boxPlotMedianas2 != undefined && window.boxPlotMedianas2 != null){
+    window.boxPlotMedianas2.destroy();
   };
-  window.boxPlotMedianas = new Chart(ctx, {
+  window.boxPlotMedianas2 = new Chart(ctx, {
     type: 'boxplot',
     data: {
       // define label tree
@@ -48,5 +48,5 @@ function chartBoxPlotMedianas(chartElement){
       }
     }
   });
-  return boxPlotMedianas;
+  return boxPlotMedianas2;
 };

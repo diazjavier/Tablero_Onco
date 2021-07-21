@@ -1,23 +1,29 @@
-function chartComparativaPxQxProd(chartElement){
-  var ctxPxQxProd = chartElement.getContext('2d');
-  if(window.chartChartComparativaPxQxProd != undefined && window.chartChartComparativaPxQxProd != null){
-    window.chartChartComparativaPxQxProd.destroy();
-  };
-  window.chartChartComparativaPxQxProd = new Chart(ctxPxQxProd, {
+// let objGrafComJuntos = {};
+function grafComJuntos2(chartElement){
+  var ctxComJ = chartElement.getContext('2d');
+  // var grafComJuntos = new Chart(ctxComJ, {
+
+  if(window.objGrafComJuntos2 != undefined && window.objGrafComJuntos2 != null)
+    window.objGrafComJuntos2.destroy();
+  window.objGrafComJuntos2 = new Chart(ctxComJ, {
     type: 'line',
     data: {
+      labels: [],
       datasets: []
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       title: {
         display: true,
-        text: 'Evolución de PxQ acumulado total y por proveedor'
+        text: 'Evolución de precios al público por unidad'
       },
       legend: {
-        position: 'top',
+        position: 'right',
         display: true,
-        fontSize: 0.5
+        labels:{
+          defaultFontSize: 5
+        }
       },
       scales: {
         xAxes: [{
@@ -32,12 +38,12 @@ function chartComparativaPxQxProd(chartElement){
             tooltipFormat: 'DD/MM/YYYY'
           },
           scaleLabel: {
-            display: false,
-            labelString: 'Fecha'
+            labelString: 'Fecha',
+            display: false
           },
           ticks: {
             minRotation: 80, // angle in degrees
-            // fontSize: 10,
+            fontSize: 10,
             autoSkip: true,
             maxTicksLimit:10
           }
@@ -47,12 +53,8 @@ function chartComparativaPxQxProd(chartElement){
         line: {
         fill: false
         }
-      },
-      tooltips: {
-        mode: 'x'
       }
     }
   });
-  return chartChartComparativaPxQxProd;
-
+  return objGrafComJuntos2;
 };

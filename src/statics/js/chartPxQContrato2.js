@@ -1,10 +1,10 @@
-function getChartPxQContrato(chartElement) {
+function getChartPxQContrato2(chartElement) {
   var ctx = chartElement.getContext('2d');
 
-  if(window.chartChartPxQContrato != undefined && window.chartChartPxQContrato != null){
-    window.chartChartPxQContrato.destroy();
+  if(window.chartChartPxQContrato2 != undefined && window.chartChartPxQContrato2 != null){
+    window.chartChartPxQContrato2.destroy();
   };
-  window.chartChartPxQContrato = new Chart(ctx, {
+  window.chartChartPxQContrato2 = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: [],
@@ -84,5 +84,5 @@ function getChartPxQContrato(chartElement) {
       }
     }
   });
-  return chartChartPxQContrato;
+  return chartChartPxQContrato2;
 };

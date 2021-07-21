@@ -113,7 +113,7 @@ window.addEventListener('load', function() {
     function muestraModalDash() {
       setTimeout(function() {
         let chartPorcPeriodoModalDash = document.getElementById("chartPorcPeriodoModalDash");
-        actualizaChartData(chartPorcPeriodo(chartPorcPeriodoModalDash))
+        actualizaChartData(chartPorcPeriodo2(chartPorcPeriodoModalDash))
         let chartPorcPeriodoBtnDwnldModalDash = document.getElementById("chartPorcPeriodoBtnDwnldModalDash");
         chartPorcPeriodoBtnDwnldModalDash.addEventListener('click', function() {
           downloadChart(chartPorcPeriodoBtnDwnldModalDash, chartPorcPeriodoModalDash)
@@ -162,7 +162,7 @@ window.addEventListener('load', function() {
       // cardPorc.innerText = porc + "%";
       setTimeout(function() {
         let boxplotMedianasModalDash = document.getElementById("boxplotMedianasModalDash");
-        actualizaChartBoxPlotMedianas(chartBoxPlotMedianas(boxplotMedianasModalDash), nne);
+        actualizaChartBoxPlotMedianas(chartBoxPlotMedianas2(boxplotMedianasModalDash), nne);
         let boxplotMedianasBtnDwnldDashModal = document.getElementById("boxplotMedianasBtnDwnldDashModal");
         boxplotMedianasBtnDwnldDashModal.addEventListener('click', function() {
           downloadChart(boxplotMedianasBtnDwnldDashModal, boxplotMedianasModalDash)
@@ -190,7 +190,7 @@ window.addEventListener('load', function() {
       // cardPorc.innerText = porc + "%";
       setTimeout(function() {
         let chartPreciosModal = document.getElementById("chartPreciosModal");
-        actualizaChartPrecios(chartEvolucionPrecios(chartPreciosModal), nne);
+        actualizaChartPrecios(chartEvolucionPrecios2(chartPreciosModal), nne);
         let chartPreciosBtnDwnldDashModal = document.getElementById("chartPreciosBtnDwnldDashModal");
         chartPreciosBtnDwnldDashModal.addEventListener('click', function() {
           downloadChart(chartPreciosBtnDwnldDashModal, chartPreciosModal)
@@ -216,7 +216,7 @@ window.addEventListener('load', function() {
       // cardPorc.innerText = porc + "%";
       setTimeout(function() {
         let chartComparativaModal = document.getElementById("chartComparativaModal");
-        actualizaChartComparativa(chartComparativa(chartComparativaModal), nne);
+        actualizaChartComparativa(chartComparativa2(chartComparativaModal), nne);
         let chartComparativaBtnDwnldDashModal = document.getElementById("chartComparativaBtnDwnldDashModal");
         chartComparativaBtnDwnldDashModal.addEventListener('click', function() {
           downloadChart(chartComparativaBtnDwnldDashModal, chartComparativaModal)
@@ -240,7 +240,7 @@ window.addEventListener('load', function() {
     function muestraModal6() {
       setTimeout(function() {
         let chartEvolPxProvModal = document.getElementById("chartEvolPxProvModal");
-        actualizaChartComxProv(chartComEnt(chartEvolPxProvModal), nne);
+        actualizaChartComxProv(chartComEnt2(chartEvolPxProvModal), nne);
         let chartEvolPxProvBtnDwnldDashModal = document.getElementById("chartEvolPxProvBtnDwnldDashModal");
         chartEvolPxProvBtnDwnldDashModal.addEventListener('click', function() {
           downloadChart(chartEvolPxProvBtnDwnldDashModal, chartEvolPxProvModal)
@@ -264,7 +264,7 @@ window.addEventListener('load', function() {
     function muestraModal7() {
       setTimeout(function() {
         let chartEvolPxQxComModal = document.getElementById("chartEvolPxQxComModal");
-        actualizaChartComparativaPxQxProd(chartComparativaPxQxProd(chartEvolPxQxComModal), nne);
+        actualizaChartComparativaPxQxProd(chartComparativaPxQxProd2(chartEvolPxQxComModal), nne);
         let chartEvolPxQxComBtnDwnldDashModal = document.getElementById("chartEvolPxQxComBtnDwnldDashModal");
         chartEvolPxQxComBtnDwnldDashModal.addEventListener('click', function() {
           downloadChart(chartEvolPxQxComBtnDwnldDashModal, chartEvolPxQxComModal)
@@ -299,7 +299,7 @@ window.addEventListener('load', function() {
     function muestraModal8() {
       setTimeout(function() {
         let chartComercialesJuntosModal = document.getElementById("chartComercialesJuntosModal");
-        actualizaChartComercialesJuntos(grafComJuntos(chartComercialesJuntosModal), nne, btnToggle);
+        actualizaChartComercialesJuntos(grafComJuntos2(chartComercialesJuntosModal), nne, btnToggle);
         let chartComercialesJuntosBtnDwnldDashModal = document.getElementById("chartComercialesJuntosBtnDwnldDashModal");
         chartComercialesJuntosBtnDwnldDashModal.addEventListener('click', function() {
           downloadChart(chartComercialesJuntosBtnDwnldDashModal, chartComercialesJuntosModal)

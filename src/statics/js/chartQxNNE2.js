@@ -1,10 +1,10 @@
-function getChartQxNNE(chartElement) {
+function getChartQxNNE2(chartElement) {
 
   var ctx = chartElement.getContext('2d');
-  if(window.chartChartQxNNE != undefined && window.chartChartQxNNE != null){
-    window.chartChartQxNNE.destroy();
+  if(window.chartChartQxNNE2 != undefined && window.chartChartQxNNE2 != null){
+    window.chartChartQxNNE2.destroy();
   };
-  window.chartChartQxNNE = new Chart(ctx, {
+  window.chartChartQxNNE2 = new Chart(ctx, {
     type: 'pie',
     data: {
       labels: ["Comarsa", "Varadero"],
@@ -37,5 +37,5 @@ function getChartQxNNE(chartElement) {
       // cutoutPercentage: 80,
     },
   });
-  return chartChartQxNNE;
+  return chartChartQxNNE2;
 };

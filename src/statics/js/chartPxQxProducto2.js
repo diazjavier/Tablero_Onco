@@ -1,9 +1,9 @@
-function chartComparativaPxQxProd(chartElement){
+function chartComparativaPxQxProd2(chartElement){
   var ctxPxQxProd = chartElement.getContext('2d');
-  if(window.chartChartComparativaPxQxProd != undefined && window.chartChartComparativaPxQxProd != null){
-    window.chartChartComparativaPxQxProd.destroy();
+  if(window.chartChartComparativaPxQxProd2 != undefined && window.chartChartComparativaPxQxProd2 != null){
+    window.chartChartComparativaPxQxProd2.destroy();
   };
-  window.chartChartComparativaPxQxProd = new Chart(ctxPxQxProd, {
+  window.chartChartComparativaPxQxProd2 = new Chart(ctxPxQxProd, {
     type: 'line',
     data: {
       datasets: []
@@ -53,6 +53,6 @@ function chartComparativaPxQxProd(chartElement){
       }
     }
   });
-  return chartChartComparativaPxQxProd;
+  return chartChartComparativaPxQxProd2;
 
 };

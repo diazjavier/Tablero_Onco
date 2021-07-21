@@ -1,7 +1,9 @@
 function chartComercialUnico(chartElement){
   var ctxComU = chartElement.getContext('2d');
   // var grafComJuntos = new Chart(ctxComJ, {
-  chartComUnico = new Chart(ctxComU, {
+  if(window.chartComUnico != undefined && window.chartComUnico != null)
+    window.chartComUnico.destroy();
+  window.chartComUnico = new Chart(ctxComU, {
     type: 'line',
     data: {
       labels: [],

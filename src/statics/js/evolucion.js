@@ -68,7 +68,7 @@ window.addEventListener('load', function() {
     // cardPorc.innerText = porc + "%";
     setTimeout(function(){
       let chartPxQContratoModal = document.getElementById("chartPxQContratoModal");
-      actualizaChartPxQContrato(getChartPxQContrato(chartPxQContratoModal));
+      actualizaChartPxQContrato(getChartPxQContrato2(chartPxQContratoModal));
       let chartPxQContratoBtnDwnldModal = document.getElementById("chartPxQContratoBtnDwnldModal");
       chartPxQContratoBtnDwnldModal.addEventListener('click', function(){downloadChart(chartPxQContratoBtnDwnldModal, chartPxQContratoModal)});
     }, 500);

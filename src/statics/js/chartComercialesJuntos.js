@@ -1,8 +1,11 @@
-let objGrafComJuntos = {};
+// let objGrafComJuntos = {};
 function grafComJuntos(chartElement){
   var ctxComJ = chartElement.getContext('2d');
   // var grafComJuntos = new Chart(ctxComJ, {
-  objGrafComJuntos = new Chart(ctxComJ, {
+
+  if(window.objGrafComJuntos != undefined && window.objGrafComJuntos != null)
+    window.objGrafComJuntos.destroy();
+  window.objGrafComJuntos = new Chart(ctxComJ, {
     type: 'line',
     data: {
       labels: [],

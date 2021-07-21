@@ -1,18 +1,21 @@
-function chartComparativaPxQxProd(chartElement){
-  var ctxPxQxProd = chartElement.getContext('2d');
-  if(window.chartChartComparativaPxQxProd != undefined && window.chartChartComparativaPxQxProd != null){
-    window.chartChartComparativaPxQxProd.destroy();
-  };
-  window.chartChartComparativaPxQxProd = new Chart(ctxPxQxProd, {
+function chartComEnt2(chartElement) {
+  // var ctxComEnt = document.getElementById('comXProv').getContext('2d');
+  var ctxComEnt = chartElement.getContext('2d');
+
+  if(window.chartChartComEnt2 != undefined && window.chartChartComEnt2 != null)
+    window.chartChartComEnt2.destroy();
+  window.chartChartComEnt2 = new Chart(ctxComEnt, {
+  // var chartComEnt = new Chart(ctxComEnt, {
     type: 'line',
     data: {
+      labels: [],
       datasets: []
     },
     options: {
       responsive: true,
       title: {
         display: true,
-        text: 'Evolución de PxQ acumulado total y por proveedor'
+        text: 'Evolución de precios de comerciales entregados por proveedor'
       },
       legend: {
         position: 'top',
@@ -39,13 +42,13 @@ function chartComparativaPxQxProd(chartElement){
             minRotation: 80, // angle in degrees
             // fontSize: 10,
             autoSkip: true,
-            maxTicksLimit:10
+            maxTicksLimit: 10
           }
         }]
       },
       elements: {
         line: {
-        fill: false
+          fill: false
         }
       },
       tooltips: {
@@ -53,6 +56,5 @@ function chartComparativaPxQxProd(chartElement){
       }
     }
   });
-  return chartChartComparativaPxQxProd;
-
+  return chartChartComEnt2;
 };

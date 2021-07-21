@@ -159,7 +159,7 @@ window.addEventListener('load', function() {
       // cardPorc.innerText = porc + "%";
       setTimeout(function() {
         let consumoxNNEModal = document.getElementById("consumoxNNEModal");
-        actualizaChartQxNNE(getChartQxNNE(consumoxNNEModal), nne);
+        actualizaChartQxNNE(getChartQxNNE2(consumoxNNEModal), nne);
         let consumoxNNEBtnDwnldModal = document.getElementById("consumoxNNEBtnDwnldModal");
         consumoxNNEBtnDwnldModal.addEventListener('click', function() {
           downloadChart(consumoxNNEBtnDwnldModal, consumoxNNEModal)

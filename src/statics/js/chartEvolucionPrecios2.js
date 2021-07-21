@@ -1,11 +1,11 @@
-function chartEvolucionPrecios(chartElement){
+function chartEvolucionPrecios2(chartElement){
   // var ctx = document.getElementById('evolucionDePrecios').getContext('2d');
   var ctx = chartElement.getContext('2d');
 
-  if(window.chartChartPrecios != undefined && window.chartChartPrecios != null){
-    window.chartChartPrecios.destroy();
+  if(window.chartChartPrecios2 != undefined && window.chartChartPrecios2 != null){
+    window.chartChartPrecios2.destroy();
   };
-  window.chartChartPrecios = new Chart(ctx, {
+  window.chartChartPrecios2 = new Chart(ctx, {
     type: 'line',
     data: {
       labels: [],
@@ -77,5 +77,5 @@ function chartEvolucionPrecios(chartElement){
       }
     }
   });
-  return chartChartPrecios;
+  return chartChartPrecios2;
 };

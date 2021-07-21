@@ -1,7 +1,11 @@
 function chartComEnt(chartElement) {
   // var ctxComEnt = document.getElementById('comXProv').getContext('2d');
   var ctxComEnt = chartElement.getContext('2d');
-  var chartComEnt = new Chart(ctxComEnt, {
+
+  if(window.chartChartComEnt != undefined && window.chartChartComEnt != null)
+    window.chartChartComEnt.destroy();
+  window.chartChartComEnt = new Chart(ctxComEnt, {
+  // var chartComEnt = new Chart(ctxComEnt, {
     type: 'line',
     data: {
       labels: [],
@@ -52,5 +56,5 @@ function chartComEnt(chartElement) {
       }
     }
   });
-  return chartComEnt;
+  return chartChartComEnt;
 };

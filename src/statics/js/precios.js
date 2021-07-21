@@ -207,7 +207,7 @@ window.addEventListener('load', function() {
       // cardPorc.innerText = porc + "%";
       setTimeout(function() {
         let boxplotMedianasModal = document.getElementById("boxplotMedianasModal");
-        actualizaChartBoxPlotMedianas(chartBoxPlotMedianas(boxplotMedianasModal), nne);
+        actualizaChartBoxPlotMedianas(chartBoxPlotMedianas2(boxplotMedianasModal), nne);
         let boxplotMedianasBtnDwnldModal = document.getElementById("boxplotMedianasBtnDwnldModal");
         boxplotMedianasBtnDwnldModal.addEventListener('click', function() {
           downloadChart(boxplotMedianasBtnDwnldModal, boxplotMedianasModal)

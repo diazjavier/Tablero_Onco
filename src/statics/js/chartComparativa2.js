@@ -1,12 +1,12 @@
-function chartComparativa(chartElement){
+function chartComparativa2(chartElement){
 
   // var ctx = document.getElementById('comparativa').getContext('2d');
   var ctx = chartElement.getContext('2d');
 
-  if(window.chartChartComparativa != undefined && window.chartChartComparativa != null){
-    window.chartChartComparativa.destroy();
+  if(window.chartChartComparativa2 != undefined && window.chartChartComparativa2 != null){
+    window.chartChartComparativa2.destroy();
   };
-  window.chartChartComparativa = new Chart(ctx, {
+  window.chartChartComparativa2 = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: ['Basal', 'Utima mediana vigente'],
@@ -37,5 +37,5 @@ function chartComparativa(chartElement){
       }
     }
   });
-  return chartChartComparativa;
+  return chartChartComparativa2;
 };

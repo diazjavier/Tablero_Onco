@@ -1,4 +1,4 @@
-function chartPorcPeriodo(chartElement) {
+function chartPorcPeriodo2(chartElement) {
 
   // Set new default font family and font color to mimic Bootstrap's default styling
   // Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
@@ -7,10 +7,10 @@ function chartPorcPeriodo(chartElement) {
   // Pie Chart Example
   // var ctx = document.getElementById("chartPorcPeriodo");
   var ctx = chartElement.getContext('2d');
-  if(window.chartChartPorcPeriodo != undefined && window.chartChartPorcPeriodo != null){
-    window.chartChartPorcPeriodo.destroy();
+  if(window.chartChartPorcPeriodo2 != undefined && window.chartChartPorcPeriodo2 != null){
+    window.chartChartPorcPeriodo2.destroy();
   };
-  window.chartChartPorcPeriodo = new Chart(ctx, {
+  window.chartChartPorcPeriodo2 = new Chart(ctx, {
     type: 'doughnut',
     data: {
       labels: ["Transcurrido", "Pendiente"],
@@ -48,5 +48,5 @@ function chartPorcPeriodo(chartElement) {
       // cutoutPercentage: 80,
     },
   });
-  return chartChartPorcPeriodo;
+  return chartChartPorcPeriodo2;
 };

@@ -72,7 +72,7 @@ window.addEventListener('load', function() {
     // cardPorc.innerText = porc + "%";
     setTimeout(function(){
       let chartPorcPeriodoModal = document.getElementById("chartPorcPeriodoModal");
-      actualizaChartData(chartPorcPeriodo(chartPorcPeriodoModal))
+      actualizaChartData(chartPorcPeriodo2(chartPorcPeriodoModal))
       let chartPorcPeriodoBtnDwnldModal = document.getElementById("chartPorcPeriodoBtnDwnldModal");
       chartPorcPeriodoBtnDwnldModal.addEventListener('click', function(){downloadChart(chartPorcPeriodoBtnDwnldModal, chartPorcPeriodoModal)});
     }, 500);
