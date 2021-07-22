@@ -1,1 +1,6 @@
 node_modules
+src/conn.js
+src/libs/database.js
+src/statics/js/ChartHeaders_OLD.js
+src/statics/js/ChartComerciales_OLD.js
+src/statics/js/ChartDetalles_OLD.js
