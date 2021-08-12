@@ -1,21 +1,21 @@
 const mysql = require('mysql2');
 const { promisify } = require('util');
-// const conn = {
-//     database: {
-//       host: 'localhost',
-//       user: 'TableroCABA',
-//       password: '123456Aa',
-//       database: 'tablerocaba'
-//     }
-// }
 const conn = {
     database: {
-      host: '134.209.124.47',
-      user: 'jdiazbd2',
-      password: '123456Aa?',
+      host: 'localhost',
+      user: 'TableroCABA',
+      password: '123456Aa',
       database: 'tablerocaba'
     }
 }
+// const conn = {
+//     database: {
+//       host: '134.209.124.47',
+//       user: 'jdiazbd2',
+//       password: '123456Aa?',
+//       database: 'tablerocaba'
+//     }
+// }
 const pool = mysql.createPool(conn.database);
 
 pool.getConnection((err, connection) => {
