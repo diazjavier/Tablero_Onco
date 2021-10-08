@@ -830,4 +830,4 @@ let Headers = [
 , {"NNE":9095900	, "MedianaBase":12.05	, "QAnualTotal":10200	, "QAnualP1":10200	, "QAnualP2":null	, "PrecioPropuestoP1":5.27	, "PrecioPropuestoP2":null	, "Denominacion":"LEVOMEPROMAZINA"	, "Modelo":"De 2 mg"	, "Descripcion":null	, "Decilo":1	, "ParaRevisar":null	, "Verificar":0	, "CodCABAP1":59281	, "CodCABAP2":null	, "CodCABAP1_2":null	, "CodCABAP2_2":null}
 , {"NNE":9095901	, "MedianaBase":26.42	, "QAnualTotal":208940	, "QAnualP1":208940	, "QAnualP2":null	, "PrecioPropuestoP1":8.86	, "PrecioPropuestoP2":null	, "Denominacion":"LEVOMEPROMAZINA"	, "Modelo":"De 25 mg"	, "Descripcion":null	, "Decilo":1	, "ParaRevisar":null	, "Verificar":0	, "CodCABAP1":241562	, "CodCABAP2":null	, "CodCABAP1_2":null	, "CodCABAP2_2":null}
 , {"NNE":9096795	, "MedianaBase":155.50	, "QAnualTotal":2520	, "QAnualP1":2520	, "QAnualP2":null	, "PrecioPropuestoP1":11.02	, "PrecioPropuestoP2":null	, "Denominacion":"SEVELAMER"	, "Modelo":"De 800 mg. como carbonato"	, "Descripcion":null	, "Decilo":1	, "ParaRevisar":null	, "Verificar":0	, "CodCABAP1":249151	, "CodCABAP2":null	, "CodCABAP1_2":null	, "CodCABAP2_2":null}
-];
+]; 
