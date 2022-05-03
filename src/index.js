@@ -10,7 +10,7 @@ const app = express();
 
 require(path.join(__dirname, 'libs', 'passport'));
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3500);
 // app.set('views', path.join(__dirname, 'statics'));
 
 app.set('view engine', 'ejs');

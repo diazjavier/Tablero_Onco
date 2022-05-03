@@ -16,9 +16,14 @@ window.addEventListener('load', function() {
   lblModeloNNE.innerHTML = "";
 
 
-  let cookNne = getCookie("nne");
+  let cookNne = getCookie("nneOnco");
   if (cookNne && cookNne != "") {
+    //
+    // setCookie("99");
+    // actualizaPreciosNNE("99");
+    // limpiaTxt(buscador);
     muestraProducto(cookNne);
+    //muestraProducto("5004334");
   };
 
   buscador.addEventListener('keyup', function(e) {
@@ -53,7 +58,7 @@ window.addEventListener('load', function() {
   buscador.focus();
 
   function muestraProducto(nneSelected) {
-    // let nneSelected = seleccionaProducto(listado, buscador.value);
+      // let nneSelected = seleccionaProducto(listado, buscador.value);
     if (nneSelected == "") {
       // alert("No se encontraron resultados para este criterio de búsqueda");
       limpiaTxt(buscador);

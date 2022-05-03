@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
   lblModeloNNE2.innerHTML = "";
 
 
-  let cookNne = getCookie("nne");
+  let cookNne = getCookie("nneOnco");
   if (cookNne && cookNne != ""){
     muestraProducto2(cookNne);
   };

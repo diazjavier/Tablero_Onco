@@ -22,6 +22,7 @@ window.addEventListener('load', function() {
 
   // Obtengo las fuentes de datos
   let cabeceras = Headers;
+  console.log("Entro a cabeceras");
   let detalle = Detalle;
   let productosComerciales = Comerciales;
   // Cargo el combo de Productos

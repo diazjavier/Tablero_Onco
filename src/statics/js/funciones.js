@@ -394,7 +394,7 @@ function limpiaTxt(control) {
 };
 
 function setCookie(nne) {
-  let cook = "nne=" + encodeURIComponent(nne) + "; max-age=31536000; path=./; SameSite=Lax";
+  let cook = "nneOnco=" + encodeURIComponent(nne) + "; max-age=31536000; path=./; SameSite=Lax";
   document.cookie = cook;
 };
 
