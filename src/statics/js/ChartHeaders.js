@@ -126,4 +126,4 @@ let Headers = [
 , {"NNE":9113080	, "MedianaBase":890.83	, "QAnualTotal":200	, "QAnualP1":100	, "QAnualP2":100	, "PrecioPropuestoP1":null	, "PrecioPropuestoP2":null	, "Denominacion":"Deferasirox"	, "Modelo":"90mg Comp."	, "Descripcion":null	, "Decilo":10	, "ParaRevisar":0	, "Verificar":0	, "CodCABAP1":null	, "CodCABAP2":null	, "CodCABAP1_2":null	, "CodCABAP2_2":null}
 , {"NNE":9115102	, "MedianaBase":85053.30	, "QAnualTotal":200	, "QAnualP1":100	, "QAnualP2":100	, "PrecioPropuestoP1":null	, "PrecioPropuestoP2":null	, "Denominacion":"Denosumab"	, "Modelo":"120mg /1.7ml Iny. Vial"	, "Descripcion":null	, "Decilo":10	, "ParaRevisar":0	, "Verificar":0	, "CodCABAP1":null	, "CodCABAP2":null	, "CodCABAP1_2":null	, "CodCABAP2_2":null}
 , {"NNE":9115722	, "MedianaBase":67298.11	, "QAnualTotal":200	, "QAnualP1":100	, "QAnualP2":100	, "PrecioPropuestoP1":null	, "PrecioPropuestoP2":null	, "Denominacion":"Paclitaxel"	, "Modelo":"150mg F.Amp."	, "Descripcion":null	, "Decilo":10	, "ParaRevisar":0	, "Verificar":0	, "CodCABAP1":null	, "CodCABAP2":null	, "CodCABAP1_2":null	, "CodCABAP2_2":null}
-];																
+];
